@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Umoja Studio - Independent Game Development">
+    <title>Umoja Studio | Independent Games</title>
+    <style>
+        :root {
+            --bg: #101318;
+            --card: #1a2029;
+            --text: #f1f3f5;
+            --muted: #a0a8b5;
+            --accent: #e8b86d;
+            --border: #303846;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        .container {
+            max-width: 1080px;
+            margin: auto;
+            padding: 0 24px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 22px 0;
+        }
+
+        .brand {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--text);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a { color: var(--muted); }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(
+                ellipse at top,
+                #2b2930,
+                var(--bg) 75%
+            );
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 7vw, 64px);
+            margin: 0 0 16px;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 18px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        section { padding: 48px 0; }
+
+        h2 {
+            font-size: 28px;
+            margin: 0 0 24px;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(260px, 1fr)
+            );
+            gap: 24px;
+        }
+
+        .game-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .game-cover {
+            min-height: 210px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(
+                ellipse at center,
+                #64452b,
+                #1b171b 75%
+            );
+            color: var(--accent);
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+            padding: 24px;
+        }
+
+        .game-info { padding: 24px; }
+
+        .game-info h3 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .muted { color: var(--muted); }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 3px 10px;
+            font-size: 12px;
+            color: var(--accent);
+        }
+
+        .game-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 30px 20px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 64px 16px; }
+            .nav-links { gap: 14px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a class="brand" href="./">UMOJA STUDIO</a>
+            <div class="nav-links">
+                <a href="#games">Games</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="hero">
+        <h1>UMOJA STUDIO</h1>
+        <p>Independent games. Creative worlds. Memorable adventures.</p>
+        <p>独立游戏 · 创意世界 · 精彩冒险</p>
+    </div>
+
+    <div class="container">
+
+        <section id="games">
+            <h2>Our Games / 游戏作品</h2>
+
+            <div class="game-grid">
+
+                <article class="game-card">
+                    <div class="game-cover">
+                        Candlelight Dungeon
+                    </div>
+
+                    <div class="game-info">
+                        <span class="tag">In Development</span>
+                        <h3>Candlelight Dungeon</h3>
+                        <p class="muted">烛火地城</p>
+
+                        <p>
+                            An upcoming dungeon-themed game
+                            developed by Umoja Studio.
+                        </p>
+
+                        <div class="game-links">
+                            <span class="muted">Coming Soon</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us / 关于我们</h2>
+
+            <p class="muted">
+                Umoja Studio is an independent game studio
+                focused on creating engaging and accessible
+                gaming experiences.
+            </p>
+
+            <p class="muted">
+                Umoja Studio 是一个独立游戏工作室，
+                致力于创造有趣、富有创意的游戏体验。
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact / 联系我们</h2>
+            <p class="muted">
+                Contact and game support information
+                will be available here.
+            </p>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <p>
+        &copy; 2026 Umoja Studio. All rights reserved.
+    </p>
+</footer>
+
+</body>
+</html>
